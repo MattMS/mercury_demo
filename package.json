@@ -11,6 +11,7 @@
     "observ-struct": "^6.0.0",
     "value-event": "^5.1.0",
     "virtual-dom": "^2.1.1",
+    "virtual-hyperscript-svg": "^2.0.0",
     "xtend": "^4.0.1"
   },
   "description": "Test of Mercury by MattMS.",
@@ -22,6 +23,7 @@
   "name": "mattms_test_mercury",
   "scripts": {
     "make": "browserify --extension=.coffee.md --transform=coffeeify index.coffee.md > index.js",
+    "make_svg": "browserify --extension=.coffee.md --transform=coffeeify ./svg/index.coffee.md > ./svg/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "0.1.0"
