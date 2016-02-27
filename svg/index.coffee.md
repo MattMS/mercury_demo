@@ -8,28 +8,29 @@
 
 	hv = require 'virtual-dom/virtual-hyperscript/svg'
 
+	observ = require 'observ'
+
 
 ## Relative imports
+
+	frame = require '../frame'
 
 	make_app = require '../make_app'
 
 
 ## Render
 
-	# svg_ns = 'http://www.w3.org/2000/svg'
-
 	render = (state)->
 		h 'div', [
 			hv 'svg',
 				height: '16em'
-				#namespace: svg_ns
 				viewBox: '0 0 32 32'
 				width: '16em'
 			, [
 				hv 'rect',
 					height: 8
 					width: 8
-					x: 8
+					x: state.block_x
 					y: 8
 			]
 		]
@@ -37,4 +38,14 @@
 
 ## Start
 
-	make_app render, {}, document.body
+	make_app render,
+		block_x: observ 20
+	, document.body
+
+	.then (state)->
+		frame 250, (difference)->
+			x = state.block_x()
+			if 0 < x
+				state.block_x.set x - 1
+			else
+				state.block_x.set 32
