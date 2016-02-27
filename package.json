@@ -23,6 +23,8 @@
   "name": "mattms_test_mercury",
   "scripts": {
     "make": "browserify --extension=.coffee.md --transform=coffeeify index.coffee.md > index.js",
+    "make_mdl": "browserify --extension=.coffee.md --transform=coffeeify ./mdl/index.coffee.md > ./mdl/index.js",
+    "make_mdl_form": "browserify --extension=.coffee.md --transform=coffeeify ./mdl/form/index.coffee.md > ./mdl/form/index.js",
     "make_svg": "browserify --extension=.coffee.md --transform=coffeeify ./svg/index.coffee.md > ./svg/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
