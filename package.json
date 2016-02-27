@@ -11,7 +11,6 @@
     "observ-struct": "^6.0.0",
     "value-event": "^5.1.0",
     "virtual-dom": "^2.1.1",
-    "virtual-hyperscript-svg": "^2.0.0",
     "xtend": "^4.0.1"
   },
   "description": "Test of Mercury by MattMS.",

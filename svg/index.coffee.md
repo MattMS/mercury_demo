@@ -6,7 +6,7 @@
 
 	h = require 'virtual-dom/virtual-hyperscript'
 
-	hv = require 'virtual-hyperscript-svg'
+	hv = require 'virtual-dom/virtual-hyperscript/svg'
 
 
 ## Relative imports
